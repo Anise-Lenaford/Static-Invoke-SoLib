@@ -17,9 +17,10 @@ object Core {
             System.loadLibrary(LIBRARY_NAME)
         } catch (e: UnsatisfiedLinkError) {
             activity.runOnUiThread {
-                Toast.makeText(activity, "Error: Native library failed to load.", Toast.LENGTH_LONG).show()
+                Toast.makeText(activity, "Error: Native Library Loading Failed", Toast.LENGTH_LONG).show()
             }
-            Log.e("Core", "Failed to load native library: ${LIBRARY_NAME}", e)
+            Log.e("Core", "Failed Loading: ${LIBRARY_NAME}", e)
         }
     }
+
 }
